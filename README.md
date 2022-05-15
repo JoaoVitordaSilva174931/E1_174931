@@ -16,21 +16,27 @@ O processamento de tais imagens, na grande maioria das vezes, requer uma máquin
 
 # Plano de trabalho
 
-- Etapa 1 (1 semana): Estudo e pesquisa de compactação de imagens
+- Etapa 1 (1 semana): Estudo e pesquisa de compactação de imagens (Concluído)
 
 Determinar formas, meios e alternativas de acordo com o custo operacional dos códigos a serem desenvolvidos para implementar a melhor forma de compactar as imagens de satélite. 
 
-- Etapa 2 (2 dias): Separação de imagens a partir do "Google Earth Engine"
+- Etapa 2 (1 semana): Análise das imagens de precipitação em Campinas (Em andamento)
 
-Selecionar as imagens e contexto em estudo (como por exemplo: estudo do clima, vegetação, relevo, oceanografia, etc) a fim de melhor visualização de como a compressão afeta a imagem.
+Estudo e coleta de informações pertinentes das imagens correspondentes à precipitação em Campinas, a fim de delimitar os principais pontos a serem verificados após o processamento e compactação das respectivas imagens.
 
-- Etapa 3 (Entre 1 e 2 semanas): Implementação do código e testes
+- Etapa 3 (Entre 1 e 2 semanas): Implementação do código e testes (Em andamento)
 
 Utilizando o Google Colab, será finalizado o código, juntamente com a realização dos testes e medidas de tempo gasto ao executá-lo em um notebook com 4 GB de RAM.
 
 - Etapa 4 (2 dias): Escrita do relatório final do projeto
 
 Finalização do projeto com a formalização do mesmo em relatório.
+
+# Resultados parciais
+
+Até o momento foram realizados os seguintes progressos:
+- Obtenção de uma pasta contendo 14 imagens de radar de amostra referentes à precipitação em Campinas.
+- Criação de um notebook no Google Colab para a realização de testes e execução do código a ser implementado. (https://colab.research.google.com/drive/1ED0fKosI4k_Qd8syzLTOpNRSmYpo1WvM)
 
 # Referências Bibliográficas
 
