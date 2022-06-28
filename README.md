@@ -8,7 +8,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 |         :---:         |  :---: |    :---:      |
 | João Vitor da Silva   | 174931 | Física Médica |
 
-## Descrição do projeto
+# Descrição do projeto
 
 A análise de imagens contituí um importante meio de transmitir informações sobre o mundo e propriedades interessantes também podem ser extraídas a partir desse estudo. Atualmente, bancos de dados com imagens da superfície terrestre são encontradas com facilidade e abundância, assim como imagens que representam fenômenos meteorológicos, que servirão de base para a análise da seguinte questão: Quais as implicações do limite de compressão de imagens de satélite sem perda de informações significativas para o estudo em questão.
 
