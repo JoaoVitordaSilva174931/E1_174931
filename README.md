@@ -10,33 +10,29 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 
 ## Descrição do projeto
 
-A análise de imagens contituí um importante meio de transmitir informações sobre o mundo e propriedades interessantes também podem ser extraídas a partir desse estudo. Atualmente, bancos de dados com imagens da superfície terrestre são encontradas com facilidade e abundância como, por exemplo, no Google Earth Engine, a qual o atual projeto utilizará para nortear seu objetivo: As implicações do limite de compressão de imagens de satélite sem perda de informações significativas para o estudo em questão.
+A análise de imagens contituí um importante meio de transmitir informações sobre o mundo e propriedades interessantes também podem ser extraídas a partir desse estudo. Atualmente, bancos de dados com imagens da superfície terrestre são encontradas com facilidade e abundância, assim como imagens que representam fenômenos meteorológicos, que servirão de base para a análise da seguinte questão: Quais as implicações do limite de compressão de imagens de satélite sem perda de informações significativas para o estudo em questão.
 
 O processamento de tais imagens, na grande maioria das vezes, requer uma máquina com memória em grande escala e um processamento tão rápido quanto. A alternativa de comprimir as imagens de satélite sem perdas de informações úteis é uma forma de abranger o alcance desse tópico para computadores mais acessíveis e de menor potência, acarretando na melhora da troca de informações em uma ciência recente que ainda permitirá novas descobertas nas mais diversas formas.  
 
-# Plano de trabalho
+# Abordagem Adotada
 
-- Etapa 1 (1 semana): Estudo e pesquisa de compactação de imagens (Concluído)
+Foram utilizadas imagens de satélite que apresentam a intensidade de chuvas na região de Campinas. O processamento foi baseado em, após a conversão das imagens de .tif para png, organizar as imagens convertidas em uma pasta no ambiente Google Colab e então executar o comando "resize" em uma amostra de imagens que retornavam diferenças visuais em comparação a imagem original. Em outras palavras, foi utilizado um critério visual (no sentido de em quais regiões a área afetada pela chuva não é mais visível na imagem comprimida) para concluir de que maneira a compressão afeta o nosso julgamento
 
-Determinar formas, meios e alternativas de acordo com o custo operacional dos códigos a serem desenvolvidos para implementar a melhor forma de compactar as imagens de satélite. 
+> - Testes realizados para a normalização da imagem tiff (a concluir)
 
-- Etapa 2 (1 semana): Análise das imagens de precipitação em Campinas (Em andamento)
 
-Estudo e coleta de informações pertinentes das imagens correspondentes à precipitação em Campinas, a fim de delimitar os principais pontos a serem verificados após o processamento e compactação das respectivas imagens.
+# Resultados Finais
 
-- Etapa 3 (Entre 1 e 2 semanas): Implementação do código e testes (Em andamento)
+Foi obtido um conjunto de imagens redimensionadas (de 480x480 pixels para 100x100 pixels) que retratam a diferença na questão de intensidade de chuvas antes e após a compressão. A escolha da mudança para 100x100 pixels foi feita baseando-se em um valor comum que representa o limite para a alteração no tamanho da imagem que, a partir dele, isto é, menor do que ele, informações crucias são perdidas em definitivo. Segue um exemplo aplicado a uma das imagens antes e após a compressão, respectivamente:
 
-Utilizando o Google Colab, será finalizado o código, juntamente com a realização dos testes e medidas de tempo gasto ao executá-lo em um notebook com 4 GB de RAM.
+![image](https://user-images.githubusercontent.com/103368895/176271920-633a526d-6c67-479b-8283-6a712fa389e3.png)
+![image](https://user-images.githubusercontent.com/103368895/176272049-67951e69-502e-459b-8260-5911325f5f82.png)
 
-- Etapa 4 (2 dias): Escrita do relatório final do projeto
+# Discussão
 
-Finalização do projeto com a formalização do mesmo em relatório.
+Em algumas partes da imagem comprimida, há a perda parcial do pixel que representava a intensidade (em branco) na imagem original, porém, ainda conseguimos chegar à conclusão de que a àrea atingida pela chuva possui um contraste visível em comparação ao fundo preto da imagem.
+As principais dificuldades encontradas durante a realização do projeto foram: Converter a imagem tiff para png com o python; normalizar a imagem tiff; definir um parâmetro para a redução máxima de tamanho sem perda significativa na informação transmitida.  
 
-# Resultados parciais
-
-Até o momento foram realizados os seguintes progressos:
-- Obtenção de uma pasta contendo 14 imagens de radar de amostra referentes à precipitação em Campinas.
-- Criação de um notebook no Google Colab para a realização de testes e execução do código a ser implementado. (https://colab.research.google.com/drive/1ED0fKosI4k_Qd8syzLTOpNRSmYpo1WvM)
 
 # Referências Bibliográficas
 
