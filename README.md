@@ -36,9 +36,9 @@ As principais dificuldades encontradas durante a realização do projeto foram: 
 
 # Referências Bibliográficas
 
-https://youtu.be/uy5ZpPJLBFA
+[1] Processamento digital de imagens com python. YouTube, 26/11/2020. Disponível em: <https://youtu.be/uy5ZpPJLBFA>
 
-https://acervolima.com/como-comprimir-imagens-usando-python-e-pil/
+[2] Como comprimir imagens usando Python e PIL. Acervo Lima, 2022. Disponível em: <https://acervolima.com/como-comprimir-imagens-usando-python-e-pil/>
 
 
 
