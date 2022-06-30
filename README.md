@@ -30,7 +30,7 @@ Foi obtido um conjunto de imagens redimensionadas (de 480x480 pixels para 100x10
 
 # Discussão
 
-Em algumas partes da imagem comprimida, há a perda parcial do pixel que representava a intensidade (em branco) na imagem original, porém, ainda conseguimos chegar à conclusão de que a àrea atingida pela chuva possui um contraste visível em comparação ao fundo preto da imagem.
+Em algumas partes da imagem comprimida, há a perda parcial do pixel que representava a intensidade (em branco) na imagem original, porém, ainda conseguimos chegar à conclusão de que a área atingida pela chuva possui um contraste visível em comparação ao fundo preto da imagem.
 As principais dificuldades encontradas durante a realização do projeto foram: Converter a imagem tiff para png com o python; normalizar a imagem tiff; definir um parâmetro para a redução máxima de tamanho sem perda significativa na informação transmitida.  
 
 
