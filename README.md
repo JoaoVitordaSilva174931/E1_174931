@@ -18,8 +18,6 @@ O processamento de tais imagens, na grande maioria das vezes, requer uma máquin
 
 Foram utilizadas imagens de satélite que apresentam a intensidade de chuvas na região de Campinas. O processamento foi baseado em, após a conversão das imagens de .tif para png, organizar as imagens convertidas em uma pasta no ambiente Google Colab e então executar o comando "resize" em uma amostra de imagens que retornavam diferenças visuais em comparação a imagem original. Em outras palavras, foi utilizado um critério visual (no sentido de em quais regiões a área afetada pela chuva não é mais visível na imagem comprimida) para concluir de que maneira a compressão afeta o nosso julgamento
 
-> - Testes realizados para a normalização da imagem tiff (a concluir)
-
 
 # Resultados Finais
 
