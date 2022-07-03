@@ -16,19 +16,30 @@ O processamento de tais imagens, na grande maioria das vezes, requer uma máquin
 
 # Abordagem Adotada
 
-Foram utilizadas imagens de satélite que apresentam a intensidade de chuvas na região de Campinas. O processamento foi baseado em, após a conversão das imagens de .tif para png, organizar as imagens convertidas em uma pasta no ambiente Google Colab e então executar o comando "resize" em uma amostra de imagens que retornavam diferenças visuais em comparação a imagem original. Em outras palavras, foi utilizado um critério visual (no sentido de em quais regiões a área afetada pela chuva não é mais visível na imagem comprimida) para concluir de que maneira a compressão afeta o nosso julgamento
+Foram utilizadas imagens de satélite que apresentam a intensidade de chuvas na região de Campinas. O processamento foi baseado em, após a conversão das imagens de .tif para png, organizar as imagens convertidas em uma pasta no ambiente Google Colab e então executar o comando "resize" em uma amostra de imagens que retornavam diferenças visuais em comparação a imagem original. Definindo uma função para aplicar threshold na imagem original e na imagem reduzida, podemos estabelecer que a imagem reduzida apresenta, em regiões de maior intensidade de chuvas, as mesmas configurações que a imagem original, isto é, não perdemos informações no que diz respeito às grandes tempestades por exemplo. Na seção de resultados finais será exposto um caso em que há pouca precipitação como um todo, porém com regiões concentradas que fornecem conclusões acerca da quantidade de chuva naquela porção da imagem [3].
 
 
 # Resultados Finais
 
-Foi obtido um conjunto de imagens redimensionadas (de 480x480 pixels para 100x100 pixels) que retratam a diferença na questão de intensidade de chuvas antes e após a compressão. A escolha da mudança para 100x100 pixels foi feita baseando-se em um valor comum que representa o limite para a alteração no tamanho da imagem que, a partir dele, isto é, menor do que ele, informações crucias são perdidas em definitivo. Segue um exemplo aplicado a uma das imagens antes e após a compressão, respectivamente:
+Foi obtido um conjunto de imagens redimensionadas (de 480x480 pixels para 100x100 pixels) que retratam a diferença na questão de intensidade de chuvas antes e após a compressão. A escolha da mudança para 100x100 pixels foi feita baseando-se em um valor comum que representa o limite para a alteração no tamanho da imagem que, a partir dele, isto é, menor do que ele, informações crucias são perdidas em definitivo de acordo com o threshold definido. Segue um exemplo aplicado a uma das imagens antes e após a compressão, respectivamente:
 
-![image](https://user-images.githubusercontent.com/103368895/176271920-633a526d-6c67-479b-8283-6a712fa389e3.png)
-![image](https://user-images.githubusercontent.com/103368895/176272049-67951e69-502e-459b-8260-5911325f5f82.png)
+![image](https://user-images.githubusercontent.com/103368895/177041254-a1f58460-3453-4ae7-b0fb-e1145547acf8.png)
+![image](https://user-images.githubusercontent.com/103368895/177041263-5d3cc217-8936-4748-9b06-2845e759ea74.png)
+
+Aplicando o threshold na imagem, temos os seguintes resultados:
+
+Imagem original
+
+![image](https://user-images.githubusercontent.com/103368895/177041307-29248926-723f-4a53-8aba-2b0470a7c714.png)
+
+Imagem reduzida
+
+![image](https://user-images.githubusercontent.com/103368895/177041330-c8188443-0a5f-48ee-928e-c1e5bb7bf4ef.png)
+
 
 # Discussão
 
-Em algumas partes da imagem comprimida, há a perda parcial do pixel que representava a intensidade (em branco) na imagem original, porém, ainda conseguimos chegar à conclusão de que a área atingida pela chuva possui um contraste visível em comparação ao fundo preto da imagem.
+Em algumas partes da imagem comprimida, há a perda parcial do pixel que representava a intensidade (em branco) na imagem original, porém, ainda conseguimos chegar à conclusão de que a área atingida pela chuva possui um contraste visível em comparação ao fundo preto da imagem. Tal conclusão é reforçada após a aplicação do threshold na imagem, sendo que, com threshold na imagem reduzida, ainda conseguimos ter visualização total da região com intensidade de chuvas elevada quando a distribuição de tempestades se encontra dispersa, exemplificado no caso descrito. 
 As principais dificuldades encontradas durante a realização do projeto foram: Converter a imagem tiff para png com o python; normalizar a imagem tiff; definir um parâmetro para a redução máxima de tamanho sem perda significativa na informação transmitida.  
 
 
@@ -37,6 +48,10 @@ As principais dificuldades encontradas durante a realização do projeto foram: 
 [1] Processamento digital de imagens com python. YouTube, 26/11/2020. Disponível em: <https://youtu.be/uy5ZpPJLBFA>
 
 [2] Como comprimir imagens usando Python e PIL. Acervo Lima, 2022. Disponível em: <https://acervolima.com/como-comprimir-imagens-usando-python-e-pil/>
+
+[3] Image Processing with Python — Blob Detection using Scikit-Image. Disponível em: <https://towardsdatascience.com/image-processing-with-python-blob-detection-using-scikit-image-5df9a8380ade>
+
+[4] Satellite Imagery Analysis 101: Handling TIFF Files. Disponível em: <https://syamkakarla.medium.com/satellite-imagery-analysis-101-handling-tiff-files-22e4d2da236d>
 
 
 
